@@ -4,11 +4,47 @@
     <title>Forms Example</title>
   </head>
   <body>
-    <h1>Web Based Greeter</h1>
+    <h1 class="greet">Web Based Greeter</h1>
 
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+      nisi ut aliquip ex ea commodo consequat.
+      Duis aute irure dolor in reprehenderit in voluptate velit
+      esse cillum dolore eu fugiat nulla pariatur.
+      Excepteur sint occaecat cupidatat non proident, sunt in
+      culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+
+    <div><span>Hello!</span></div>
+
+    <p><a href="http://google.com">Google Something></a></p>
+
+    <!-- begin greet form -->
     <form action="/greetings" method="post">
-      <p><label for="first_name_input">What is your first name?</label></p>
-      <input type="text" name="first_name" id="first_name_input">
+      <p>
+        <label for="first_name_input">What is your first name?</label>
+        <input type="text" name="first_name" id="first_name_input" maxlength="15">
+      </p>
+
+      <p>
+        <label for="message_input">Do you want to leave a message?</label>
+        <textarea name="message" id="message_input"></textarea>
+      </p>
+
+      <select name="state">
+        <option value="MA">Massachusetts</option>
+        <option value="RI">Rhode Island</option>
+      </select>
+
+      Resident <input type="radio" name="res-status" value="male">
+      Nonresident <input type="radio" name="res-status" value="female">
+
+      Jr <input type="checkbox" name="suffix" value="Jr">
+      LMHC <input type="checkbox" name="suffix" value="LMHC">
+      PhD <input type="checkbox" name="suffix" value="PhD">
+
       <input type="submit" value="Say Hello">
     </form>
   </body>
